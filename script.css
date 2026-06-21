@@ -140,6 +140,50 @@ section:nth-child(4) { animation-delay: 0.8s; }
 .skill-item.mysql p { color: #00758f; }
 .skill-item.mariadb p { color: #003545; }
 
+.case-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.case-header span {
+    border: 1px solid #3a5f7d;
+    border-radius: 999px;
+    color: #9fd3ff;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+}
+
+#projeto-automacao h3 {
+    color: #ffffff;
+    font-size: 1.45rem;
+    margin: 0 0 12px;
+}
+
+.case-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 22px;
+}
+
+.case-card {
+    background-color: #252529;
+    border: 1px solid #33333a;
+    border-radius: 8px;
+    padding: 18px;
+}
+
+.case-card h4 {
+    color: #66b3ff;
+    margin: 0 0 8px;
+}
+
+.case-card p {
+    margin: 0;
+}
+
 .skills-container {
     display: grid;
     grid-template-columns: repeat(6, minmax(80px, 1fr));
@@ -234,6 +278,14 @@ section:nth-child(4) { animation-delay: 0.8s; }
     .skills-container {
         grid-template-columns: repeat(3, minmax(72px, 1fr));
         gap: 18px 12px;
+    }
+
+    .case-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .case-card {
+        padding: 16px;
     }
 
     .skill-item img {
