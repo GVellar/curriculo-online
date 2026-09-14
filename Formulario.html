@@ -5,31 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário Interativo</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#projeto-automacao">Projeto</a></li>
+            <li><a href="Formulario.html">Formulário para contato</a></li>
+        </ul>
+    </nav>
     <style>
         /* Estilos personalizados */
+        body.min-h-screen {
+            padding: 0;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: flex-start;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #222;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .menu li {
+            flex: 0 1 220px;
+        }
+
+        .menu a {
+            display: block;
+            padding: 14px;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .menu a:hover,
+        .menu a:focus-visible {
+            background-color: #444;
+            outline: 2px solid #60a5fa;
+            outline-offset: -2px;
+        }
+
+        @media (max-width: 700px) {
+            .menu {
+                flex-direction: column;
+            }
+
+            .menu li {
+                flex: none;
+                width: 100%;
+            }
+
+            .menu a {
+                padding: 12px 16px;
+            }
+        }
+
         .input-error {
             border-color: #f87171 !important;
         }
+
         .error-message {
             color: #fca5a5;
             font-size: 0.875rem;
             margin-top: 0.25rem;
         }
+
         .success-message {
             color: #86efac;
             font-size: 0.875rem;
             margin-top: 0.25rem;
         }
+
         .form-card {
+            width: calc(100% - 32px);
+            margin: 24px auto;
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
             transition: all 0.3s ease;
             background-color: rgb(30, 30, 32);
             color: rgb(8, 0, 0);
         }
-        .form-card:hover {
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
+
+            .form-card:hover {
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
     </style>
 </head>
 <body class="min-h-screen flex items-center justify-center p-4" style="background-color: rgb(30, 30, 32);">
