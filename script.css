@@ -6,6 +6,118 @@ html {
     scroll-behavior: smooth;
 }
 
+section[id] {
+    scroll-margin-top: 80px;
+}
+
+#servicos-prestados:hover {
+    transform: none;
+}
+
+#servicos-prestados {
+    width: min(1100px, calc(100% - 32px));
+}
+
+.servicos-intro {
+    color: #d0d0d8;
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.servico-card {
+    min-width: 0;
+    padding: 24px;
+    background-color: #252529;
+    border: 1px solid #3a5f7d;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.servico-card h3 {
+    margin: 8px 0 16px;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.servico-destaque {
+    color: #9fd3ff;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.servico-card ul {
+    padding-left: 20px;
+}
+
+.servico-card li + li {
+    margin-top: 10px;
+}
+
+.servico-beneficio {
+    border-top: 1px solid #444;
+    padding-top: 16px;
+    color: #d0d0d8;
+}
+
+.servico-arte {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.servico-arte-link {
+    display: block;
+    color: #9fd3ff;
+    margin-bottom: 20px;
+}
+
+.servico-arte-link:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 4px;
+}
+
+.servicos-contato {
+    margin-top: 24px;
+}
+
+.servicos-botao {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #66b3ff;
+    color: #101820;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.servicos-botao:hover {
+    background: #9fd3ff;
+}
+
+.servicos-botao:focus-visible,
+.menu a:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: -3px;
+}
+
+@media (max-width: 700px) {
+    section[id] { scroll-margin-top: 210px; }
+    .servicos-grid { grid-template-columns: 1fr; }
+    .servico-card { padding: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    #servicos-prestados { animation: none; opacity: 1; }
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
